@@ -33,10 +33,11 @@ struct ListCharactersView: View {
                     }
                 }
                         )
+                
                             .task{
                             viewStore.send(.getCharacters)
                         }
-                    }
+                    }.ignoresSafeArea(edges:.top)
         }
     }
 }
