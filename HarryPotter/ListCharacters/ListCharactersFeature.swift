@@ -35,7 +35,7 @@ struct ListCharactersFeature : Reducer {
                 
             case .insertCharacters(let characters):
                 state.characters = IdentifiedArray(uniqueElements: characters)
-                print(characters)
+                print("Fetched characters")
                 return .none
             }
         }
