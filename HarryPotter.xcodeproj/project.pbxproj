@@ -81,6 +81,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AD91B0FA2AF0E016009FF885 /* ListCharacters */ = {
+			isa = PBXGroup;
+			children = (
+				BDF199662AF0CAFB006F4F77 /* ListCharacters.swift */,
+				BDF1996C2AF0DE19006F4F77 /* ListCharactersFeature.swift */,
+			);
+			path = ListCharacters;
+			sourceTree = "<group>";
+		};
 		BDF199292AF0C865006F4F77 = {
 			isa = PBXGroup;
 			children = (
@@ -104,9 +113,8 @@
 		BDF199342AF0C865006F4F77 /* HarryPotter */ = {
 			isa = PBXGroup;
 			children = (
-				BDF1996B2AF0DE07006F4F77 /* Features */,
+				AD91B0FA2AF0E016009FF885 /* ListCharacters */,
 				BDF199682AF0CC30006F4F77 /* Dependencies */,
-				BDF199652AF0CAD5006F4F77 /* Views */,
 				BDF1995F2AF0C87F006F4F77 /* Models */,
 				BDF199352AF0C865006F4F77 /* HarryPotterApp.swift */,
 				BDF199372AF0C865006F4F77 /* ContentView.swift */,
@@ -149,28 +157,12 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		BDF199652AF0CAD5006F4F77 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				BDF199662AF0CAFB006F4F77 /* ListCharacters.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
 		BDF199682AF0CC30006F4F77 /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
 				BDF199692AF0CC43006F4F77 /* ApiClient.swift */,
 			);
 			path = Dependencies;
-			sourceTree = "<group>";
-		};
-		BDF1996B2AF0DE07006F4F77 /* Features */ = {
-			isa = PBXGroup;
-			children = (
-				BDF1996C2AF0DE19006F4F77 /* ListCharactersFeature.swift */,
-			);
-			path = Features;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
