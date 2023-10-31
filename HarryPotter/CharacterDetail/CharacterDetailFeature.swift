@@ -9,10 +9,10 @@ import Foundation
 import ComposableArchitecture
 
 struct CharacterDetailFeature : Reducer {
-    struct State {
+    struct State : Equatable {
         var character : Character
     }
-    enum Action {
+    enum Action :Equatable{
         case favoriteButtonTapped
     }
     var body : some ReducerOf<Self>{

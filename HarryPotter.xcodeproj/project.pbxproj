@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AD3ACB692AF0F58900DF01EC /* ListCharactersFeatureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3ACB682AF0F58900DF01EC /* ListCharactersFeatureTests.swift */; };
+		AD3ACB6B2AF117B900DF01EC /* CharacterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3ACB6A2AF117B900DF01EC /* CharacterView.swift */; };
 		BDF199362AF0C865006F4F77 /* HarryPotterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF199352AF0C865006F4F77 /* HarryPotterApp.swift */; };
 		BDF199382AF0C865006F4F77 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF199372AF0C865006F4F77 /* ContentView.swift */; };
 		BDF1993A2AF0C866006F4F77 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDF199392AF0C866006F4F77 /* Assets.xcassets */; };
@@ -44,6 +45,7 @@
 
 /* Begin PBXFileReference section */
 		AD3ACB682AF0F58900DF01EC /* ListCharactersFeatureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCharactersFeatureTests.swift; sourceTree = "<group>"; };
+		AD3ACB6A2AF117B900DF01EC /* CharacterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterView.swift; sourceTree = "<group>"; };
 		BDF199322AF0C865006F4F77 /* HarryPotter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HarryPotter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDF199352AF0C865006F4F77 /* HarryPotterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HarryPotterApp.swift; sourceTree = "<group>"; };
 		BDF199372AF0C865006F4F77 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -189,6 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				BDF199742AF101C7006F4F77 /* CharacterDetailFeature.swift */,
+				AD3ACB6A2AF117B900DF01EC /* CharacterView.swift */,
 			);
 			path = CharacterDetail;
 			sourceTree = "<group>";
@@ -331,6 +334,7 @@
 			files = (
 				BDF199752AF101C7006F4F77 /* CharacterDetailFeature.swift in Sources */,
 				BDF199612AF0C896006F4F77 /* Character.swift in Sources */,
+				AD3ACB6B2AF117B900DF01EC /* CharacterView.swift in Sources */,
 				BDF199382AF0C865006F4F77 /* ContentView.swift in Sources */,
 				BDF199362AF0C865006F4F77 /* HarryPotterApp.swift in Sources */,
 				BDF199672AF0CAFB006F4F77 /* ListCharacters.swift in Sources */,
