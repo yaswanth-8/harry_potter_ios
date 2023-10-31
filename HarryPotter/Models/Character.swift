@@ -12,6 +12,8 @@ struct Character : Codable, Equatable,  Identifiable {
     var hogwartsStudent : Bool?
     var hogwartsStaff : Bool?
     
+    
+    
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         self.id = try container.decodeIfPresent(String.self, forKey: .id)
@@ -24,6 +26,9 @@ struct Character : Codable, Equatable,  Identifiable {
         self.hogwartsStaff = try container.decodeIfPresent(Bool.self, forKey: .hogwartsStaff)
     }
     
+<<<<<<< Updated upstream
+
+    
     init(id : String, name : String, gender : String, house : String, image : String, patronus : String, hogwartsStudent : Bool, hogwartsStaff : Bool){
         self.id = id
         self.name = name
@@ -34,4 +39,8 @@ struct Character : Codable, Equatable,  Identifiable {
         self.hogwartsStudent = hogwartsStudent
         self.hogwartsStaff = hogwartsStaff
     }
+
+=======
+   
+>>>>>>> Stashed changes
 }
