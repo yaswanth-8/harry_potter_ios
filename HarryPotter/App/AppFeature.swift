@@ -17,9 +17,11 @@ struct AppFeature : Reducer {
     struct State {
         var selectedTab : Tab = .student
         var charactersList = ListCharactersFeature.State()
+        var path = StackState <Path.State>()
     }
     enum Action {
         case charactersList(ListCharactersFeature.Action)
+        case path (StackAction<Path.State, Path.Action>)
     }
     var body: some ReducerOf<Self> {
         Scope(state: \.charactersList, action: /Action.charactersList){
@@ -29,7 +31,27 @@ struct AppFeature : Reducer {
             switch action {
             case .charactersList(_):
                 return .none
+            case .path(_):
+                return .none
+            }
+        }
+        .forEach(\.path, action: /Action.path){
+            Path()
+        }
+    }
+    
+    struct Path : Reducer {
+        enum State {
+            case characterDetail(CharacterDetailFeature.State)
+        }
+        enum Action {
+            case characterDetail(CharacterDetailFeature.Action)
+        }
+        var body : some ReducerOf<Self> {
+            Scope(state: /State.characterDetail, action: /Action.characterDetail){
+                CharacterDetailFeature()
             }
         }
     }
+    
 }
