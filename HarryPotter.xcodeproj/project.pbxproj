@@ -18,6 +18,7 @@
 		BDF199642AF0C909006F4F77 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = BDF199632AF0C909006F4F77 /* ComposableArchitecture */; };
 		BDF199672AF0CAFB006F4F77 /* ListCharacters.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF199662AF0CAFB006F4F77 /* ListCharacters.swift */; };
 		BDF1996A2AF0CC43006F4F77 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF199692AF0CC43006F4F77 /* ApiClient.swift */; };
+		BDF1996D2AF0DE19006F4F77 /* ListCharactersFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF1996C2AF0DE19006F4F77 /* ListCharactersFeature.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		BDF199602AF0C896006F4F77 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		BDF199662AF0CAFB006F4F77 /* ListCharacters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCharacters.swift; sourceTree = "<group>"; };
 		BDF199692AF0CC43006F4F77 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
+		BDF1996C2AF0DE19006F4F77 /* ListCharactersFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCharactersFeature.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 		BDF199342AF0C865006F4F77 /* HarryPotter */ = {
 			isa = PBXGroup;
 			children = (
+				BDF1996B2AF0DE07006F4F77 /* Features */,
 				BDF199682AF0CC30006F4F77 /* Dependencies */,
 				BDF199652AF0CAD5006F4F77 /* Views */,
 				BDF1995F2AF0C87F006F4F77 /* Models */,
@@ -160,6 +163,14 @@
 				BDF199692AF0CC43006F4F77 /* ApiClient.swift */,
 			);
 			path = Dependencies;
+			sourceTree = "<group>";
+		};
+		BDF1996B2AF0DE07006F4F77 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				BDF1996C2AF0DE19006F4F77 /* ListCharactersFeature.swift */,
+			);
+			path = Features;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -302,6 +313,7 @@
 				BDF199382AF0C865006F4F77 /* ContentView.swift in Sources */,
 				BDF199362AF0C865006F4F77 /* HarryPotterApp.swift in Sources */,
 				BDF199672AF0CAFB006F4F77 /* ListCharacters.swift in Sources */,
+				BDF1996D2AF0DE19006F4F77 /* ListCharactersFeature.swift in Sources */,
 				BDF1996A2AF0CC43006F4F77 /* ApiClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

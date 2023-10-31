@@ -8,45 +8,7 @@
 import SwiftUI
 import ComposableArchitecture
 
-struct ListCharactersFeature : Reducer {
-    struct State : Equatable {
-        var characters : IdentifiedArrayOf<Character> = []
-    }
-    
-    enum Action {
-        case getCharacters
-        case insertCharacters([Character])
-    }
-    
-    @Dependency (\.getCharacters) var getCharacters
-    var body: some ReducerOf<Self> {
-        Reduce { state, action in
-            switch action {
-            case .getCharacters:
-                return .run { send in
-                    let getCharactersRespone = await getCharacters.fetch()
-                    switch getCharactersRespone {
-                    case .success(let Characters):
-                        await send(.insertCharacters(Characters))
-                    case .failure(_):
-                        print("Error occured")
-                    }
-                }
-                
-            case .insertCharacters(let characters):
-                state.characters = IdentifiedArray(uniqueElements: characters)
-                print(characters)
-                return .none
-            }
-        }
-    }
-}
-
-
-
-
-
-struct ListCharacters: View {
+struct ListCharactersView: View {
     @State private var characters : [Character] = []
     let store : StoreOf<ListCharactersFeature>
     var body: some View {
@@ -60,7 +22,7 @@ struct ListCharacters: View {
 }
 
 #Preview {
-    ListCharacters(store: Store(initialState: ListCharactersFeature.State(), reducer: {
+    ListCharactersView(store: Store(initialState: ListCharactersFeature.State(), reducer: {
         ListCharactersFeature()
     }))
 }
