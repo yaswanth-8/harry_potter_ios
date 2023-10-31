@@ -26,7 +26,7 @@ struct Character : Codable, Equatable,  Identifiable {
         self.hogwartsStaff = try container.decodeIfPresent(Bool.self, forKey: .hogwartsStaff)
     }
     
-<<<<<<< Updated upstream
+
 
     
     init(id : String, name : String, gender : String, house : String, image : String, patronus : String, hogwartsStudent : Bool, hogwartsStaff : Bool){
@@ -40,7 +40,4 @@ struct Character : Codable, Equatable,  Identifiable {
         self.hogwartsStaff = hogwartsStaff
     }
 
-=======
-   
->>>>>>> Stashed changes
 }
