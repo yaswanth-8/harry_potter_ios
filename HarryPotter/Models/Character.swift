@@ -23,4 +23,15 @@ struct Character : Codable, Equatable,  Identifiable {
         self.hogwartsStudent = try container.decodeIfPresent(Bool.self, forKey: .hogwartsStudent)
         self.hogwartsStaff = try container.decodeIfPresent(Bool.self, forKey: .hogwartsStaff)
     }
+    
+    init(id : String, name : String, gender : String, house : String, image : String, patronus : String, hogwartsStudent : Bool, hogwartsStaff : Bool){
+        self.id = id
+        self.name = name
+        self.gender = gender
+        self.house = house
+        self.image = image
+        self.patronus = patronus
+        self.hogwartsStudent = hogwartsStudent
+        self.hogwartsStaff = hogwartsStaff
+    }
 }
