@@ -14,12 +14,12 @@ enum Tab {
 }
 
 struct AppFeature : Reducer {
-    struct State {
+    struct State :Equatable{
         var selectedTab : Tab = .student
         var charactersList = ListCharactersFeature.State()
         var path = StackState <Path.State>()
     }
-    enum Action {
+    enum Action :Equatable{
         case charactersList(ListCharactersFeature.Action)
         case path (StackAction<Path.State, Path.Action>)
     }
@@ -41,10 +41,10 @@ struct AppFeature : Reducer {
     }
     
     struct Path : Reducer {
-        enum State {
+        enum State :Equatable{
             case characterDetail(CharacterDetailFeature.State)
         }
-        enum Action {
+        enum Action: Equatable {
             case characterDetail(CharacterDetailFeature.Action)
         }
         var body : some ReducerOf<Self> {

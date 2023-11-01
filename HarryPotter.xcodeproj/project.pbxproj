@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		AD3ACB692AF0F58900DF01EC /* ListCharactersFeatureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3ACB682AF0F58900DF01EC /* ListCharactersFeatureTests.swift */; };
 		AD3ACB6D2AF1285000DF01EC /* CharacterDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3ACB6C2AF1285000DF01EC /* CharacterDetailView.swift */; };
+		AD3ACB6F2AF140C600DF01EC /* AppFeatureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3ACB6E2AF140C600DF01EC /* AppFeatureTests.swift */; };
 		BDF199362AF0C865006F4F77 /* HarryPotterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF199352AF0C865006F4F77 /* HarryPotterApp.swift */; };
 		BDF199382AF0C865006F4F77 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF199372AF0C865006F4F77 /* ContentView.swift */; };
 		BDF1993A2AF0C866006F4F77 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDF199392AF0C866006F4F77 /* Assets.xcassets */; };
@@ -46,6 +47,7 @@
 /* Begin PBXFileReference section */
 		AD3ACB682AF0F58900DF01EC /* ListCharactersFeatureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCharactersFeatureTests.swift; sourceTree = "<group>"; };
 		AD3ACB6C2AF1285000DF01EC /* CharacterDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailView.swift; sourceTree = "<group>"; };
+		AD3ACB6E2AF140C600DF01EC /* AppFeatureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFeatureTests.swift; sourceTree = "<group>"; };
 		BDF199322AF0C865006F4F77 /* HarryPotter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HarryPotter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDF199352AF0C865006F4F77 /* HarryPotterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HarryPotterApp.swift; sourceTree = "<group>"; };
 		BDF199372AF0C865006F4F77 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 			children = (
 				BDF199462AF0C866006F4F77 /* HarryPotterTests.swift */,
 				AD3ACB682AF0F58900DF01EC /* ListCharactersFeatureTests.swift */,
+				AD3ACB6E2AF140C600DF01EC /* AppFeatureTests.swift */,
 			);
 			path = HarryPotterTests;
 			sourceTree = "<group>";
@@ -351,6 +354,7 @@
 			files = (
 				AD3ACB692AF0F58900DF01EC /* ListCharactersFeatureTests.swift in Sources */,
 				BDF199472AF0C866006F4F77 /* HarryPotterTests.swift in Sources */,
+				AD3ACB6F2AF140C600DF01EC /* AppFeatureTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
