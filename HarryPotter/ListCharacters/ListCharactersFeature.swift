@@ -1,11 +1,11 @@
 //
-//  ListCharacters.swift
+//  ListCharactersFeature.swift
 //  HarryPotter
 //
 //  Created by Yaswanth on 31/10/23.
 //
 
-import SwiftUI
+import Foundation
 import ComposableArchitecture
 
 struct ListCharactersFeature : Reducer {
@@ -13,7 +13,7 @@ struct ListCharactersFeature : Reducer {
         var characters : IdentifiedArrayOf<Character> = []
     }
     
-    enum Action {
+    enum Action :Equatable {
         case getCharacters
         case insertCharacters([Character])
     }
@@ -35,7 +35,7 @@ struct ListCharactersFeature : Reducer {
                 
             case .insertCharacters(let characters):
                 state.characters = IdentifiedArray(uniqueElements: characters)
-                print(characters)
+                print("Fetched characters")
                 return .none
             }
         }
@@ -43,24 +43,3 @@ struct ListCharactersFeature : Reducer {
 }
 
 
-
-
-
-struct ListCharacters: View {
-    @State private var characters : [Character] = []
-    let store : StoreOf<ListCharactersFeature>
-    var body: some View {
-        WithViewStore(self.store, observe: {$0}){viewStore in 
-            Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-                .onAppear(){
-                    viewStore.send(.getCharacters)
-                }
-        }
-    }
-}
-
-#Preview {
-    ListCharacters(store: Store(initialState: ListCharactersFeature.State(), reducer: {
-        ListCharactersFeature()
-    }))
-}
