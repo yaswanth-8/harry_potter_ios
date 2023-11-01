@@ -13,7 +13,7 @@ struct ListCharactersFeature : Reducer {
         var characters : IdentifiedArrayOf<Character> = []
     }
     
-    enum Action {
+    enum Action :Equatable {
         case getCharacters
         case insertCharacters([Character])
     }
