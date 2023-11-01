@@ -23,6 +23,9 @@ struct ListCharactersFeature : Reducer {
         Reduce { state, action in
             switch action {
             case .getCharacters:
+                if !state.characters.isEmpty {
+                    return .none
+                }
                 return .run { send in
                     let getCharactersRespone = await getCharacters.fetch()
                     switch getCharactersRespone {

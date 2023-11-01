@@ -13,7 +13,20 @@ struct AppView: View {
     var body: some View {
         NavigationStackStore(self.store.scope(state: \.path, action: {.path($0)}),
         root: {
-            ListCharactersView(store: self.store.scope(state: \.charactersList, action: {.charactersList($0)}))
+            TabView{
+                
+                ListCharactersView(store: self.store.scope(state: \.charactersList, action: {.charactersList($0)}))
+                    .tabItem {
+                            Image(systemName: "house.fill")
+                    }
+                    .tag(Tab.saved)
+                
+                SavedCharactersView(store: self.store.scope(state:\.savedCharactersList, action: {.savedCharacters($0)}))
+                    .tabItem {
+                        Image(systemName: "bookmark.fill")
+                    }
+                    .tag(Tab.student)
+            }
         },
         destination: {
             state in
@@ -31,6 +44,6 @@ struct AppView: View {
 
 #Preview {
     AppView(store: Store(initialState: AppFeature.State() , reducer: {
-        AppFeature()._printChanges()
+        AppFeature()
     }))
 }

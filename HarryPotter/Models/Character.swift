@@ -11,7 +11,7 @@ struct Character : Codable, Equatable,  Identifiable {
     var patronus : String?
     var hogwartsStudent : Bool?
     var hogwartsStaff : Bool?
-    
+    var isSaved : Bool = false
     
     
     init(from decoder: Decoder) throws {
@@ -29,7 +29,7 @@ struct Character : Codable, Equatable,  Identifiable {
 
 
     
-    init(id : String, name : String, gender : String, house : String, image : String, patronus : String, hogwartsStudent : Bool, hogwartsStaff : Bool){
+    init(id : String, name : String, gender : String, house : String, image : String, patronus : String, hogwartsStudent : Bool, hogwartsStaff : Bool, isSaved : Bool? = false){
         self.id = id
         self.name = name
         self.gender = gender
@@ -38,9 +38,11 @@ struct Character : Codable, Equatable,  Identifiable {
         self.patronus = patronus
         self.hogwartsStudent = hogwartsStudent
         self.hogwartsStaff = hogwartsStaff
+        self.isSaved = isSaved ?? false
     }
 
 }
 
 
-let mockCharacter : Character = Character(id: "abc", name: "Harry", gender: "male", house: "gryffindor", image: "https://ik.imagekit.io/hpapi/ginny.jpg", patronus: "deer", hogwartsStudent: true, hogwartsStaff: false)
+let mockCharacter : Character = Character(id: "abc", name: "Harry", gender: "male", house: "gryffindor", image: "https://ik.imagekit.io/hpapi/ginny.jpg", patronus: "deer", hogwartsStudent: true, hogwartsStaff: false, isSaved: true)
+

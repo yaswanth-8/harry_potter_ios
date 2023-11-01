@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		AD3ACB692AF0F58900DF01EC /* ListCharactersFeatureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3ACB682AF0F58900DF01EC /* ListCharactersFeatureTests.swift */; };
 		AD3ACB6D2AF1285000DF01EC /* CharacterDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3ACB6C2AF1285000DF01EC /* CharacterDetailView.swift */; };
+		BDA983D42AF161AA002933BF /* SavedCharactersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA983D32AF161AA002933BF /* SavedCharactersView.swift */; };
+		BDA983D62AF16C26002933BF /* SavedCharactersFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA983D52AF16C26002933BF /* SavedCharactersFeature.swift */; };
 		BDF199362AF0C865006F4F77 /* HarryPotterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF199352AF0C865006F4F77 /* HarryPotterApp.swift */; };
 		BDF199382AF0C865006F4F77 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF199372AF0C865006F4F77 /* ContentView.swift */; };
 		BDF1993A2AF0C866006F4F77 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDF199392AF0C866006F4F77 /* Assets.xcassets */; };
@@ -46,6 +48,8 @@
 /* Begin PBXFileReference section */
 		AD3ACB682AF0F58900DF01EC /* ListCharactersFeatureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCharactersFeatureTests.swift; sourceTree = "<group>"; };
 		AD3ACB6C2AF1285000DF01EC /* CharacterDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailView.swift; sourceTree = "<group>"; };
+		BDA983D32AF161AA002933BF /* SavedCharactersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedCharactersView.swift; sourceTree = "<group>"; };
+		BDA983D52AF16C26002933BF /* SavedCharactersFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedCharactersFeature.swift; sourceTree = "<group>"; };
 		BDF199322AF0C865006F4F77 /* HarryPotter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HarryPotter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDF199352AF0C865006F4F77 /* HarryPotterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HarryPotterApp.swift; sourceTree = "<group>"; };
 		BDF199372AF0C865006F4F77 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -100,6 +104,15 @@
 			path = ListCharacters;
 			sourceTree = "<group>";
 		};
+		BDA983D02AF15F8D002933BF /* SavedCharacters */ = {
+			isa = PBXGroup;
+			children = (
+				BDA983D32AF161AA002933BF /* SavedCharactersView.swift */,
+				BDA983D52AF16C26002933BF /* SavedCharactersFeature.swift */,
+			);
+			path = SavedCharacters;
+			sourceTree = "<group>";
+		};
 		BDF199292AF0C865006F4F77 = {
 			isa = PBXGroup;
 			children = (
@@ -123,6 +136,7 @@
 		BDF199342AF0C865006F4F77 /* HarryPotter */ = {
 			isa = PBXGroup;
 			children = (
+				BDA983D02AF15F8D002933BF /* SavedCharacters */,
 				BDF199732AF101B0006F4F77 /* CharacterDetail */,
 				BDF1996E2AF0FC00006F4F77 /* App */,
 				AD91B0FA2AF0E016009FF885 /* ListCharacters */,
@@ -337,10 +351,12 @@
 				BDF199382AF0C865006F4F77 /* ContentView.swift in Sources */,
 				BDF199362AF0C865006F4F77 /* HarryPotterApp.swift in Sources */,
 				BDF199672AF0CAFB006F4F77 /* ListCharactersView.swift in Sources */,
+				BDA983D42AF161AA002933BF /* SavedCharactersView.swift in Sources */,
 				AD3ACB6D2AF1285000DF01EC /* CharacterDetailView.swift in Sources */,
 				BDF199722AF0FE59006F4F77 /* AppView.swift in Sources */,
 				BDF1996D2AF0DE19006F4F77 /* ListCharactersFeature.swift in Sources */,
 				BDF199702AF0FC2C006F4F77 /* AppFeature.swift in Sources */,
+				BDA983D62AF16C26002933BF /* SavedCharactersFeature.swift in Sources */,
 				BDF1996A2AF0CC43006F4F77 /* ApiClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
