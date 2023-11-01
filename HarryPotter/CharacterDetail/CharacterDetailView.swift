@@ -41,7 +41,7 @@ struct CharacterDetailView: View {
                                Spacer()
                                
                                Image(systemName: "graduationcap.fill")
-                               Text(viewStore.character.hogwartsStaff ?? false ? "student" : "tutor")
+                               Text(viewStore.character.hogwartsStaff ?? false ? "tutor" : "student")
                            }
                                
                            Spacer()
