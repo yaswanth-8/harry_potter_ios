@@ -7,6 +7,7 @@
 
 import SwiftUI
 import ComposableArchitecture
+import ImageSaver
 
 struct CharacterDetailView: View {
     let store : StoreOf<CharacterDetailFeature>
@@ -15,38 +16,40 @@ struct CharacterDetailView: View {
             
            if let image = viewStore.character.image {
                VStack(spacing:0){
-                   AsyncImage(url: URL(string:image)) { Image in
-                       Image
-                           .resizable()
-                           .frame(width:400,height: 500)
-                           .aspectRatio(contentMode: .fit)
-                   } placeholder: {
-                       ProgressView()
-                   }
-                   
+                   AsyncImage(url: URL(string: image)) { image in
+                        image
+                                   .resizable()
+                                   .frame(width: 400, height: 500)
+                                   .aspectRatio(contentMode: .fit)
+                       } placeholder: {
+                           ProgressView()
+                       }
                    HStack(alignment:.top){
-                       VStack(alignment: .leading){
-                           Text(viewStore.character.name ?? "")
-                               .font(.title)
-                               .fontWeight(.bold)
-                           Text(viewStore.character.house ?? "")
-                               .font(.title2)
-                           
-                           Spacer()
-                           
-                           HStack{
-                               Image(systemName: "bird.fill")
-                               Text(viewStore.character.patronus ?? "")
+                       VStack {
+                           DownloadImageToGalleryFromURLStringButton(urlString: viewStore.character.image)
+                           VStack(alignment: .leading){
+                               Text(viewStore.character.name ?? "")
+                                   .font(.title)
+                                   .fontWeight(.bold)
+                               Text(viewStore.character.house ?? "")
+                                   .font(.title2)
                                
                                Spacer()
                                
-                               Image(systemName: "graduationcap.fill")
-                               Text(viewStore.character.hogwartsStaff ?? false ? "tutor" : "student")
+                               HStack{
+                                   Image(systemName: "bird.fill")
+                                   Text(viewStore.character.patronus ?? "")
+                                   
+                                   Spacer()
+                                   
+                                   Image(systemName: "graduationcap.fill")
+                                   Text(viewStore.character.hogwartsStaff ?? false ? "tutor" : "student")
+                               }
+                                   
+                               Spacer()
                            }
-                               
-                           Spacer()
+                           .padding(10)
                        }
-                       .padding(10)
                        
                        Spacer()
                        

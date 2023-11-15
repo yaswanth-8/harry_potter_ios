@@ -15,13 +15,13 @@ enum ApiError : Error {
 }
 
 struct GetCharactersClient  {
-    var fetch : () async -> Result<[Character],ApiError>
+    var fetch : (_ houseName : String) async -> Result<[Character],ApiError>
 }
 
 extension GetCharactersClient : DependencyKey{
-    static var liveValue = Self {
+    static var liveValue = Self {houseName in 
         fetch : do {
-            guard let url = URL(string: "https://hp-api.onrender.com/api/characters/house/gryffindor") else {
+            guard let url = URL(string: "https://hp-api.onrender.com/api/characters/house/\(houseName)") else {
                 return .failure(.invalidUrl)
             }
             guard let (data,_) = try? await URLSession.shared.data(from: url) else {
@@ -34,7 +34,6 @@ extension GetCharactersClient : DependencyKey{
             return .success(characters)
         }
     }
-
 }
 
 extension DependencyValues {

@@ -44,5 +44,6 @@ struct Character : Codable, Equatable,  Identifiable {
 }
 
 
-let mockCharacter : Character = Character(id: "abc", name: "Harry", gender: "male", house: "gryffindor", image: "https://ik.imagekit.io/hpapi/ginny.jpg", patronus: "deer", hogwartsStudent: true, hogwartsStaff: false, isSaved: true)
+let mockCharacter : Character = Character(id: "abc", name: "Harry", gender: "male", house: "gryffindor", image: "https://ik.imagekit.io/hpapi/harry.jpg", patronus: "deer", hogwartsStudent: true, hogwartsStaff: false, isSaved: true)
 
+let mockImage = "https://ik.imagekit.io/hpapi/harry.jpg"

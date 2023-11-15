@@ -17,17 +17,32 @@ struct AppView: View {
                 
                 ListCharactersView(store: self.store.scope(state: \.charactersList, action: {.charactersList($0)}))
                     .tabItem {
-                            Image(systemName: "house.fill")
+                            Image(systemName: "person.fill")
+                            
                     }
-                    .tag(Tab.saved)
+                    .tag(Tab.characters)
                 
                 SavedCharactersView(store: self.store.scope(state:\.savedCharactersList, action: {.savedCharacters($0)}))
                     .tabItem {
                         Image(systemName: "bookmark.fill")
                     }
-                    .tag(Tab.student)
+                    .tag(Tab.saved)
+                
+                SpellsView(store: self.store.scope(state: \.spellsList, action: {.spellsList($0)}))
+                    .tabItem {
+                        Image(systemName: "star.leadinghalf.filled")
+                    }
+                    .tag(Tab.characters)
+                
+                GameView(store: self.store.scope(state: \.game, action: {.game($0)}))
+                    .tabItem {
+                        Image(systemName: "gamecontroller.fill")
+                    }
+                    .tag(Tab.game)
             }
-        },
+            
+        }
+        ,
         destination: {
             state in
             switch state {

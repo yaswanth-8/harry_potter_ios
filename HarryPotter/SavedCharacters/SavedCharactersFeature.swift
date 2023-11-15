@@ -10,7 +10,7 @@ import ComposableArchitecture
 
 struct SavedCharactersFeature : Reducer{
     struct State : Equatable{
-        var characters : IdentifiedArrayOf<Character> = [mockCharacter]
+        var characters : IdentifiedArrayOf<Character> = []
     }
     enum Action{
         

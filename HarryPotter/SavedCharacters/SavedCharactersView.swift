@@ -1,40 +1,30 @@
-//
-//  SavedCharactersView.swift
-//  HarryPotter
-//
-//  Created by Yaswanth on 31/10/23.
-//
-
 import SwiftUI
 import ComposableArchitecture
 
 struct SavedCharactersView: View {
-    var store : StoreOf<SavedCharactersFeature>
+    var store: StoreOf<SavedCharactersFeature>
+    
     var body: some View {
-        WithViewStore(self.store, observe : {$0}){ viewStore in
+        WithViewStore(self.store, observe: { $0 }) { viewStore in
+            if viewStore.characters.isEmpty {
+                Text("No saved characters")
+                    .font(.title)
+                    .fontWeight(.bold)
+                    .foregroundColor(.secondary)
+                    .padding()
+            } else {
             ScrollView(.vertical) {
-                    LazyVGrid(columns: [GridItem(spacing:0),GridItem(spacing:0)],spacing: 0, content: {
-                        ForEach(viewStore.characters){character in
-                            
-                            if let url = character.image  , !url.isEmpty {
+                    LazyVGrid(columns: [GridItem(spacing: 0), GridItem(spacing: 0)], spacing: 0) {
+                        ForEach(viewStore.characters) { character in
+                            if let url = character.image, !url.isEmpty {
                                 NavigationLink(state: AppFeature.Path.State.characterDetail(.init(character: character))) {
-                                    AsyncImage(url: URL(string: url)){
-                                        Image in
-                                        Image
-                                            .resizable()
-                                            .scaledToFill()
-                                            .frame(width:200,height: 300)
-                                    }placeholder: {
-                                        ProgressView()
-                                        
-                                    }
+                                    ImageCardLayout(urlString: url)
                                 }
                             }
                         }
                     }
-                            )
-                        
-            }.ignoresSafeArea(edges:.top)
+                }
+            }
         }
     }
 }

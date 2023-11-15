@@ -10,6 +10,24 @@
       }
     },
     {
+      "identity" : "download-image-to-gallery",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/yaswanth-8/Download-Image-To-Gallery.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "7ec49d3bb6cf4e59f4c5dbd86cb776aaa1222680"
+      }
+    },
+    {
+      "identity" : "mutatearray",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/yaswanth-8/MutateArray.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "7cddffd21dcf40c8e75ec10659a8ccd47c99690c"
+      }
+    },
+    {
       "identity" : "swift-case-paths",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/pointfreeco/swift-case-paths",

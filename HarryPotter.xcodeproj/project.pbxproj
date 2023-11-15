@@ -9,8 +9,21 @@
 /* Begin PBXBuildFile section */
 		AD3ACB692AF0F58900DF01EC /* ListCharactersFeatureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3ACB682AF0F58900DF01EC /* ListCharactersFeatureTests.swift */; };
 		AD3ACB6D2AF1285000DF01EC /* CharacterDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3ACB6C2AF1285000DF01EC /* CharacterDetailView.swift */; };
+		BD17BCB72AF408A400A1154C /* SpellsFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD17BCB62AF408A400A1154C /* SpellsFeature.swift */; };
+		BD17BCB92AF4091D00A1154C /* SpellsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD17BCB82AF4091D00A1154C /* SpellsView.swift */; };
+		BD17BCBB2AF4092F00A1154C /* Spell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD17BCBA2AF4092F00A1154C /* Spell.swift */; };
+		BD17BCBD2AF40A6900A1154C /* GetSpellsClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD17BCBC2AF40A6900A1154C /* GetSpellsClient.swift */; };
+		BD17BCBF2AF413CC00A1154C /* SpellRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD17BCBE2AF413CC00A1154C /* SpellRowView.swift */; };
+		BD6AE48A2AFCE866003A5982 /* ImageSaver in Frameworks */ = {isa = PBXBuildFile; productRef = BD6AE4892AFCE866003A5982 /* ImageSaver */; };
+		BD84C8FD2AF3512800554D37 /* SavedCardsToggleClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD84C8FC2AF3512800554D37 /* SavedCardsToggleClient.swift */; };
+		BD901BE62AF4B6A400A5876F /* GameFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD901BE52AF4B6A400A5876F /* GameFeature.swift */; };
+		BD901BE82AF4B7D800A5876F /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD901BE72AF4B7D800A5876F /* GameView.swift */; };
+		BD901BEA2AF4CD1300A5876F /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD901BE92AF4CD1300A5876F /* Common.swift */; };
+		BD901BEF2AF4CEEE00A5876F /* RandomCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD901BEE2AF4CEEE00A5876F /* RandomCardView.swift */; };
+		BD947C332AF2316600C55136 /* MutateArray in Frameworks */ = {isa = PBXBuildFile; productRef = BD947C322AF2316600C55136 /* MutateArray */; };
 		BDA983D42AF161AA002933BF /* SavedCharactersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA983D32AF161AA002933BF /* SavedCharactersView.swift */; };
 		BDA983D62AF16C26002933BF /* SavedCharactersFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA983D52AF16C26002933BF /* SavedCharactersFeature.swift */; };
+		BDBA19822AF3982B00A9B385 /* ImageCardLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBA19812AF3982B00A9B385 /* ImageCardLayout.swift */; };
 		BDF199362AF0C865006F4F77 /* HarryPotterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF199352AF0C865006F4F77 /* HarryPotterApp.swift */; };
 		BDF199382AF0C865006F4F77 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF199372AF0C865006F4F77 /* ContentView.swift */; };
 		BDF1993A2AF0C866006F4F77 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDF199392AF0C866006F4F77 /* Assets.xcassets */; };
@@ -21,7 +34,7 @@
 		BDF199612AF0C896006F4F77 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF199602AF0C896006F4F77 /* Character.swift */; };
 		BDF199642AF0C909006F4F77 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = BDF199632AF0C909006F4F77 /* ComposableArchitecture */; };
 		BDF199672AF0CAFB006F4F77 /* ListCharactersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF199662AF0CAFB006F4F77 /* ListCharactersView.swift */; };
-		BDF1996A2AF0CC43006F4F77 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF199692AF0CC43006F4F77 /* ApiClient.swift */; };
+		BDF1996A2AF0CC43006F4F77 /* GetCharactersClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF199692AF0CC43006F4F77 /* GetCharactersClient.swift */; };
 		BDF1996D2AF0DE19006F4F77 /* ListCharactersFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF1996C2AF0DE19006F4F77 /* ListCharactersFeature.swift */; };
 		BDF199702AF0FC2C006F4F77 /* AppFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF1996F2AF0FC2C006F4F77 /* AppFeature.swift */; };
 		BDF199722AF0FE59006F4F77 /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF199712AF0FE59006F4F77 /* AppView.swift */; };
@@ -48,8 +61,19 @@
 /* Begin PBXFileReference section */
 		AD3ACB682AF0F58900DF01EC /* ListCharactersFeatureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCharactersFeatureTests.swift; sourceTree = "<group>"; };
 		AD3ACB6C2AF1285000DF01EC /* CharacterDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailView.swift; sourceTree = "<group>"; };
+		BD17BCB62AF408A400A1154C /* SpellsFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellsFeature.swift; sourceTree = "<group>"; };
+		BD17BCB82AF4091D00A1154C /* SpellsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellsView.swift; sourceTree = "<group>"; };
+		BD17BCBA2AF4092F00A1154C /* Spell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spell.swift; sourceTree = "<group>"; };
+		BD17BCBC2AF40A6900A1154C /* GetSpellsClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetSpellsClient.swift; sourceTree = "<group>"; };
+		BD17BCBE2AF413CC00A1154C /* SpellRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellRowView.swift; sourceTree = "<group>"; };
+		BD84C8FC2AF3512800554D37 /* SavedCardsToggleClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedCardsToggleClient.swift; sourceTree = "<group>"; };
+		BD901BE52AF4B6A400A5876F /* GameFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameFeature.swift; sourceTree = "<group>"; };
+		BD901BE72AF4B7D800A5876F /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		BD901BE92AF4CD1300A5876F /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		BD901BEE2AF4CEEE00A5876F /* RandomCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomCardView.swift; sourceTree = "<group>"; };
 		BDA983D32AF161AA002933BF /* SavedCharactersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedCharactersView.swift; sourceTree = "<group>"; };
 		BDA983D52AF16C26002933BF /* SavedCharactersFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedCharactersFeature.swift; sourceTree = "<group>"; };
+		BDBA19812AF3982B00A9B385 /* ImageCardLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCardLayout.swift; sourceTree = "<group>"; };
 		BDF199322AF0C865006F4F77 /* HarryPotter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HarryPotter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDF199352AF0C865006F4F77 /* HarryPotterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HarryPotterApp.swift; sourceTree = "<group>"; };
 		BDF199372AF0C865006F4F77 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -62,7 +86,7 @@
 		BDF199522AF0C866006F4F77 /* HarryPotterUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HarryPotterUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		BDF199602AF0C896006F4F77 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		BDF199662AF0CAFB006F4F77 /* ListCharactersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCharactersView.swift; sourceTree = "<group>"; };
-		BDF199692AF0CC43006F4F77 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
+		BDF199692AF0CC43006F4F77 /* GetCharactersClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCharactersClient.swift; sourceTree = "<group>"; };
 		BDF1996C2AF0DE19006F4F77 /* ListCharactersFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCharactersFeature.swift; sourceTree = "<group>"; };
 		BDF1996F2AF0FC2C006F4F77 /* AppFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFeature.swift; sourceTree = "<group>"; };
 		BDF199712AF0FE59006F4F77 /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
@@ -74,6 +98,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD947C332AF2316600C55136 /* MutateArray in Frameworks */,
+				BD6AE48A2AFCE866003A5982 /* ImageSaver in Frameworks */,
 				BDF199642AF0C909006F4F77 /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -104,6 +130,33 @@
 			path = ListCharacters;
 			sourceTree = "<group>";
 		};
+		BD17BCB52AF4089200A1154C /* Spells */ = {
+			isa = PBXGroup;
+			children = (
+				BD17BCB62AF408A400A1154C /* SpellsFeature.swift */,
+				BD17BCB82AF4091D00A1154C /* SpellsView.swift */,
+				BD17BCBE2AF413CC00A1154C /* SpellRowView.swift */,
+			);
+			path = Spells;
+			sourceTree = "<group>";
+		};
+		BD901BE42AF4B63E00A5876F /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				BD901BE52AF4B6A400A5876F /* GameFeature.swift */,
+				BD901BE72AF4B7D800A5876F /* GameView.swift */,
+			);
+			path = Game;
+			sourceTree = "<group>";
+		};
+		BD901BEB2AF4CECE00A5876F /* RandomCard */ = {
+			isa = PBXGroup;
+			children = (
+				BD901BEE2AF4CEEE00A5876F /* RandomCardView.swift */,
+			);
+			path = RandomCard;
+			sourceTree = "<group>";
+		};
 		BDA983D02AF15F8D002933BF /* SavedCharacters */ = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +164,14 @@
 				BDA983D52AF16C26002933BF /* SavedCharactersFeature.swift */,
 			);
 			path = SavedCharacters;
+			sourceTree = "<group>";
+		};
+		BDBA19802AF3980E00A9B385 /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				BDBA19812AF3982B00A9B385 /* ImageCardLayout.swift */,
+			);
+			path = Layout;
 			sourceTree = "<group>";
 		};
 		BDF199292AF0C865006F4F77 = {
@@ -136,6 +197,10 @@
 		BDF199342AF0C865006F4F77 /* HarryPotter */ = {
 			isa = PBXGroup;
 			children = (
+				BD901BEB2AF4CECE00A5876F /* RandomCard */,
+				BD901BE42AF4B63E00A5876F /* Game */,
+				BD17BCB52AF4089200A1154C /* Spells */,
+				BDBA19802AF3980E00A9B385 /* Layout */,
 				BDA983D02AF15F8D002933BF /* SavedCharacters */,
 				BDF199732AF101B0006F4F77 /* CharacterDetail */,
 				BDF1996E2AF0FC00006F4F77 /* App */,
@@ -180,6 +245,8 @@
 			isa = PBXGroup;
 			children = (
 				BDF199602AF0C896006F4F77 /* Character.swift */,
+				BD17BCBA2AF4092F00A1154C /* Spell.swift */,
+				BD901BE92AF4CD1300A5876F /* Common.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -187,7 +254,9 @@
 		BDF199682AF0CC30006F4F77 /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
-				BDF199692AF0CC43006F4F77 /* ApiClient.swift */,
+				BDF199692AF0CC43006F4F77 /* GetCharactersClient.swift */,
+				BD84C8FC2AF3512800554D37 /* SavedCardsToggleClient.swift */,
+				BD17BCBC2AF40A6900A1154C /* GetSpellsClient.swift */,
 			);
 			path = Dependencies;
 			sourceTree = "<group>";
@@ -228,6 +297,8 @@
 			name = HarryPotter;
 			packageProductDependencies = (
 				BDF199632AF0C909006F4F77 /* ComposableArchitecture */,
+				BD947C322AF2316600C55136 /* MutateArray */,
+				BD6AE4892AFCE866003A5982 /* ImageSaver */,
 			);
 			productName = HarryPotter;
 			productReference = BDF199322AF0C865006F4F77 /* HarryPotter.app */;
@@ -303,6 +374,8 @@
 			mainGroup = BDF199292AF0C865006F4F77;
 			packageReferences = (
 				BDF199622AF0C909006F4F77 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+				BD947C312AF2316600C55136 /* XCRemoteSwiftPackageReference "MutateArray" */,
+				BD6AE4882AFCE866003A5982 /* XCRemoteSwiftPackageReference "Download-Image-To-Gallery" */,
 			);
 			productRefGroup = BDF199332AF0C865006F4F77 /* Products */;
 			projectDirPath = "";
@@ -349,15 +422,26 @@
 				BDF199752AF101C7006F4F77 /* CharacterDetailFeature.swift in Sources */,
 				BDF199612AF0C896006F4F77 /* Character.swift in Sources */,
 				BDF199382AF0C865006F4F77 /* ContentView.swift in Sources */,
+				BDBA19822AF3982B00A9B385 /* ImageCardLayout.swift in Sources */,
+				BD901BEA2AF4CD1300A5876F /* Common.swift in Sources */,
 				BDF199362AF0C865006F4F77 /* HarryPotterApp.swift in Sources */,
 				BDF199672AF0CAFB006F4F77 /* ListCharactersView.swift in Sources */,
 				BDA983D42AF161AA002933BF /* SavedCharactersView.swift in Sources */,
 				AD3ACB6D2AF1285000DF01EC /* CharacterDetailView.swift in Sources */,
+				BD901BE82AF4B7D800A5876F /* GameView.swift in Sources */,
 				BDF199722AF0FE59006F4F77 /* AppView.swift in Sources */,
+				BD17BCB92AF4091D00A1154C /* SpellsView.swift in Sources */,
 				BDF1996D2AF0DE19006F4F77 /* ListCharactersFeature.swift in Sources */,
 				BDF199702AF0FC2C006F4F77 /* AppFeature.swift in Sources */,
+				BD17BCB72AF408A400A1154C /* SpellsFeature.swift in Sources */,
+				BD17BCBB2AF4092F00A1154C /* Spell.swift in Sources */,
+				BD901BE62AF4B6A400A5876F /* GameFeature.swift in Sources */,
+				BD17BCBD2AF40A6900A1154C /* GetSpellsClient.swift in Sources */,
 				BDA983D62AF16C26002933BF /* SavedCharactersFeature.swift in Sources */,
-				BDF1996A2AF0CC43006F4F77 /* ApiClient.swift in Sources */,
+				BDF1996A2AF0CC43006F4F77 /* GetCharactersClient.swift in Sources */,
+				BD901BEF2AF4CEEE00A5876F /* RandomCardView.swift in Sources */,
+				BD84C8FD2AF3512800554D37 /* SavedCardsToggleClient.swift in Sources */,
+				BD17BCBF2AF413CC00A1154C /* SpellRowView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -525,6 +609,7 @@
 				DEVELOPMENT_TEAM = W2AW59778Q;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Access to write photos";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -554,6 +639,7 @@
 				DEVELOPMENT_TEAM = W2AW59778Q;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Access to write photos";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -690,6 +776,22 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		BD6AE4882AFCE866003A5982 /* XCRemoteSwiftPackageReference "Download-Image-To-Gallery" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/yaswanth-8/Download-Image-To-Gallery.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		BD947C312AF2316600C55136 /* XCRemoteSwiftPackageReference "MutateArray" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/yaswanth-8/MutateArray.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 		BDF199622AF0C909006F4F77 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
@@ -701,6 +803,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		BD6AE4892AFCE866003A5982 /* ImageSaver */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BD6AE4882AFCE866003A5982 /* XCRemoteSwiftPackageReference "Download-Image-To-Gallery" */;
+			productName = ImageSaver;
+		};
+		BD947C322AF2316600C55136 /* MutateArray */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BD947C312AF2316600C55136 /* XCRemoteSwiftPackageReference "MutateArray" */;
+			productName = MutateArray;
+		};
 		BDF199632AF0C909006F4F77 /* ComposableArchitecture */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = BDF199622AF0C909006F4F77 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
